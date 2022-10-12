@@ -49,4 +49,5 @@
     </aop:config>
 
     <context:component-scan base-package="com.gxa.service"></context:component-scan>
+    <context:component-scan base-package="com.gxa.dto"></context:component-scan>
 </beans>
