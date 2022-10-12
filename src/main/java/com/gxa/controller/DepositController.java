@@ -22,10 +22,10 @@ public class DepositController {
 //      list.add("来了");
 //      list.add("准备");
 //      list.add("接收");
-      Inbound inBound = this.inBoundService.queryAll();
+      Inbound inbound = this.inBoundService.queryAll();
 //      System.out.println(inBound);
 
-      TableResult r = new TableResult(0,"suc",inBound);
+      TableResult r = new TableResult(0,"suc",inbound);
 
       return r;
    }

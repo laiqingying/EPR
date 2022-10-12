@@ -1,6 +1,6 @@
 package com.gxa.controller;
 
-import com.gxa.common.utils.TableResult;
+import com.gxa.common.uitls.TableResult;
 import com.gxa.entity.User;
 import io.swagger.annotations.*;
 import org.springframework.web.bind.annotation.PostMapping;
