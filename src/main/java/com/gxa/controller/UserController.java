@@ -1,19 +1,10 @@
 package com.gxa.controller;
 
-import com.gxa.dto.UserDto;
+import com.gxa.common.utils.TableResult;
 import com.gxa.entity.User;
-import com.gxa.utils.R;
-import com.gxa.utils.Result;
 import io.swagger.annotations.*;
-import lombok.val;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
-
-import javax.annotation.Resource;
 
 @RestController
 @Api(tags = "用户接口")
@@ -36,10 +27,9 @@ public class UserController {
     })
     @ApiOperation("用户登录")
     @PostMapping("/user/login")
-    public Result login(User user){
-        UserDto userDto = new UserDto();
-        User login = userDto.login(user);
-        Result result = new Result(0,"success",null,login);
+    public TableResult login(User user){
+
+        TableResult result = new TableResult(0,"success",null,null);
         return result;
  }
 

@@ -1,32 +1,28 @@
 package com.gxa.controller;
 
-import com.gxa.dto.MyOrderDto;
-import com.gxa.entity.MyOrder;
+import com.gxa.common.utils.TableResult;
 import com.gxa.service.MyOrderService;
-import com.gxa.utils.Result;
 import io.swagger.annotations.Api;
-import org.apache.shiro.authz.annotation.RequiresPermissions;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
-import org.springframework.stereotype.Repository;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import javax.annotation.Resource;
-import java.util.List;
 
 @RestController
 @Api(tags = "销售订单接口")
 public class MyOrderController {
 
+    //@Autowired
+    private MyOrderService myOrderService;
 
     // @RequiresPermissions("order:list") 权限控制注解
     @GetMapping("/orders")
-    public Result list(ModelMap map){
-        MyOrderDto myOrderDto = new MyOrderDto();
+    @ApiOperation("查询所有销售订单")
+    public TableResult list(ModelMap map){
 //        List<MyOrder> myOrders = myOrderDto.queryAll();
-        Result result = new Result(0,"successMyOrder",null,null);
+
+        TableResult result = new TableResult(0,"successMyOrder",null,null);
         return result;
     }
 }

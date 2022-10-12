@@ -1,19 +1,24 @@
-package com.gxa.utils;
+package com.gxa.common.utils;
 
-public class Result {
-
+public class TableResult {
     private Integer code;
     private String msg;
     private Integer count;
     private Object data;
 
-    public Result() {
+    public TableResult() {
     }
 
-    public Result(Integer code, String msg, Integer count, Object data) {
+    public TableResult(Integer code, String msg, Integer count, Object data) {
         this.code = code;
         this.msg = msg;
         this.count = count;
+        this.data = data;
+    }
+
+    public TableResult(Integer code, String msg, Object data) {
+        this.code = code;
+        this.msg = msg;
         this.data = data;
     }
 
