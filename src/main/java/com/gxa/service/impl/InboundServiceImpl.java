@@ -6,6 +6,8 @@ import com.gxa.service.InBoundService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class InboundServiceImpl implements InBoundService {
 
@@ -13,9 +15,9 @@ public class InboundServiceImpl implements InBoundService {
     private InboundMapper inBoundMapper;
 
     @Override
-    public Inbound queryAll() {
-        Inbound inBound = this.inBoundMapper.queryall();
-        return inBound;
+    public List<Inbound> queryAll() {
+        List<Inbound> inbounds = this.inBoundMapper.queryAll();
+        return inbounds;
     }
 
     @Override
@@ -29,12 +31,12 @@ public class InboundServiceImpl implements InBoundService {
     }
 
     @Override
-    public void eidAdd() {  //指派员工 添加
+    public void eidSet() {  //指派员工 添加
 
     }
 
     @Override
-    public void eidDelete() {  //撤回指派
+    public void eidRepeal(Integer eid) {  //撤回指派
 
     }
 }

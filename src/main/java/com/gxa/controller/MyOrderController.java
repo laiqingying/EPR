@@ -1,6 +1,6 @@
 package com.gxa.controller;
 
-import com.gxa.common.utils.TableResult;
+import com.gxa.common.uitls.TableResult;
 import com.gxa.service.MyOrderService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
