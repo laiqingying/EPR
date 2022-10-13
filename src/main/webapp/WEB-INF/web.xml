@@ -42,14 +42,14 @@
   </filter-mapping>
 
   <!-- 配置过滤 @putMapper @DeleteMapper   -->
-<!--  <filter>-->
-<!--    <filter-name>hiddenHttpMethodFilter</filter-name>-->
-<!--    <filter-class>org.springframework.web.filter.HiddenHttpMethodFilter</filter-class>-->
-<!--  </filter>-->
-<!--  <filter-mapping>-->
-<!--    <filter-name>hiddenHttpMethodFilter</filter-name>-->
-<!--    <url-pattern>/*</url-pattern>-->
-<!--  </filter-mapping>-->
+  <filter>
+    <filter-name>hiddenHttpMethodFilter</filter-name>
+    <filter-class>org.springframework.web.filter.HiddenHttpMethodFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>hiddenHttpMethodFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
   <!--    配置shiro过滤器-->
 <!--  <filter>-->
 <!--    <filter-name>shiroFilter</filter-name>-->
