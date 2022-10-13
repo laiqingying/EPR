@@ -19,8 +19,7 @@ import java.util.Map;
 @Api(tags = "用户接口")
 public class UserController {
 
-    @Autowired
-    private UserService userService;
+        private UserService userService;
 
     @ApiImplicitParams(value = {
             @ApiImplicitParam(name = "Authorization", value = "令牌", paramType = "header", required = true),

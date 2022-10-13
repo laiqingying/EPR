@@ -3,6 +3,7 @@ package com.gxa.entity;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import io.swagger.annotations.ApiOperation;
+import lombok.AllArgsConstructor;
 import lombok.Data;
 
 /**
@@ -14,8 +15,11 @@ import lombok.Data;
  * @Version:
  **/
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 @ApiModel("商品")
 public class Goods {
     @ApiModelProperty("商品id")

@@ -19,8 +19,9 @@ import java.util.*;
 @Api(tags = "销售订单接口")
 public class MyOrderController {
 
-    @Autowired
-    private  MyOrderService myOrderService;
+//    @Autowired
+    @Resource
+    private MyOrderService myOrderService;
 
     // @RequiresPermissions("order:list") 权限控制注解
     @GetMapping("/orders/{current}/{limit}")
