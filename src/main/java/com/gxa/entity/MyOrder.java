@@ -24,12 +24,15 @@ public class MyOrder {
     private Date submitTime;
     @ApiModelProperty("配送方式")
     private Integer type;
-    @ApiModelProperty("收货人")
+    @ApiModelProperty("收货人/用户账号")
     private String receiver;
     @ApiModelProperty("联系电话")
     private String tel;
     @ApiModelProperty("订单数量")
     private Integer saleqty;
+    @ApiModelProperty("订单来源")
+    private String source;
     @ApiModelProperty("商品类")
     private Goods goods;
+
 }

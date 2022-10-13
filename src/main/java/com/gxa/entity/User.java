@@ -16,6 +16,8 @@ public class User {
     private String password;
     @ApiModelProperty(value = "盐值")
     private String salt;
+    @ApiModelProperty(value = "手机号")
+    private String tel;
     @ApiModelProperty(value = "权限   1：超级管理员    2：中级管理员     3：普通管理员   ")
     private int limit;
 }
