@@ -2,12 +2,10 @@ package com.gxa.controller;
 
 import com.github.pagehelper.PageHelper;
 import com.gxa.common.uitls.R;
-import com.gxa.common.uitls.TableResult;
 import com.gxa.dto.InboundDto;
 import com.gxa.entity.Inbound;
 import com.gxa.service.InBoundService;
 import io.swagger.annotations.Api;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,7 +25,7 @@ public class DepositController {
    //查询
    @ApiOperation("入库页面查询接口")
    @GetMapping("/ware/dep")
-   public R query(@ApiParam("接收参数的dto") InboundDto inboundDto, @ApiParam("页数") Integer page, @ApiParam("条数") Integer limit){
+   public R query(@ApiParam("接收参数的dto")InboundDto inboundDto, @ApiParam("页数") Integer page, @ApiParam("条数") Integer limit){
 //      List list  = new ArrayList();
 //      list.add("数据");
 //      list.add("来了");
@@ -48,10 +46,10 @@ public class DepositController {
    //完成入库
    @ApiOperation("完成入库接口")
    @PostMapping("/ware/add")
-   public TableResult add(@ApiParam("封装入库dto") Inbound inBound){
-      TableResult r = new TableResult(0,"添加成功",null);
+   public R add(@ApiParam("封装入库dto") Inbound inBound){
 
-      return r;
+
+      return R.ok("添加成功");
    }
 
    //查询员工 emp表
