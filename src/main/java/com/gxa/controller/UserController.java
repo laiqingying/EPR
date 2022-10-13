@@ -1,6 +1,6 @@
 package com.gxa.controller;
 
-import com.gxa.common.utils.R;
+import com.gxa.common.uitls.R;
 import com.gxa.entity.User;
 import com.gxa.service.UserService;
 import io.swagger.annotations.*;

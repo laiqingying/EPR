@@ -2,7 +2,6 @@ package com.gxa.controller;
 
 import com.github.pagehelper.PageHelper;
 import com.gxa.common.uitls.R;
-import com.gxa.common.uitls.TableResult;
 import com.gxa.dto.InboundDto;
 import com.gxa.entity.Inbound;
 import com.gxa.service.InBoundService;
@@ -48,10 +47,10 @@ public class DepositController {
    //完成入库
    @ApiOperation("完成入库接口")
    @PostMapping("/ware/add")
-   public TableResult add(@ApiParam("封装入库dto") Inbound inBound){
-      TableResult r = new TableResult(0,"添加成功",null);
+   public R add(@ApiParam("封装入库dto") Inbound inBound){
+      //R r = new TableResult(0,"添加成功",null);
 
-      return r;
+      return R.ok();
    }
 
    //查询员工 emp表

@@ -1,6 +1,7 @@
 package com.gxa.controller;
 
-import com.gxa.common.utils.R;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.gxa.common.uitls.R;
 import com.gxa.entity.Goods;
 import com.gxa.entity.MyOrder;
 import com.gxa.service.MyOrderService;
