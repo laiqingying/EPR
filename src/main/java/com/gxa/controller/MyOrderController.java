@@ -46,7 +46,7 @@ public class MyOrderController {
         }
     }
 
-    @PostMapping("/order/add")
+    @PostMapping("/orders/add")
     @ApiOperation("添加销售订单")
     public R addUser(MyOrder myOrder){
         try {
@@ -58,9 +58,9 @@ public class MyOrderController {
         }
     }
 
-    @GetMapping("/queryOrdersByCondition/{current}/{limit}")
+    @GetMapping("/orders/queryByCondition/{current}/{limit}")
     @ApiOperation("根据条件查询销售订单")
-    public R queryByCondition(@PathVariable("current") int current, @PathVariable("limit") int limit, MyOrder myOrder){
+    public R queryByCondition(@PathVariable("current") int current, @PathVariable("limit") int limit, @RequestBody MyOrder myOrder){
         try {
             Map<String,Object> map = new HashMap<>();
             List<MyOrder> orders = new ArrayList<>();
@@ -76,7 +76,7 @@ public class MyOrderController {
         }
     }
 
-    @PutMapping("/order/close")
+    @PutMapping("/orders/close")
     @ApiOperation("根据id修改订单状态为关闭")
     public R updateCloseById(Integer id){
         try {
@@ -88,7 +88,7 @@ public class MyOrderController {
         }
     }
 
-    @PutMapping("/order/out")
+    @PutMapping("/orders/outById")
     @ApiOperation("根据id修改订单状态为发货")
     public R updateOutById(Integer id){
         try {
@@ -112,7 +112,7 @@ public class MyOrderController {
         }
     }
 
-    @PutMapping("/order/finish")
+    @PutMapping("/orders/finish")
     @ApiOperation("根据id修改订单状态为确认收货已完成")
     public R updateFinishById(Integer id){
         try {
@@ -124,7 +124,7 @@ public class MyOrderController {
         }
     }
 
-    @DeleteMapping("/order/delete")
+    @DeleteMapping("/orders/deleteById")
     @ApiOperation("根据id删除订单")
     public R deleteById(Integer id){
 
